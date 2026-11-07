@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Velvet Brew</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Cart toggle (CSS-only for now; JS can take over later) -->
+  <input type="checkbox" id="cart-toggle" class="cart-toggle" aria-label="Toggle cart">
+
+  <header class="navbar">
+    <a href="#home" class="logo">Velvet Brew</a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <label for="cart-toggle" class="cart-btn">
+      Cart <span class="cart-count">2</span>
+    </label>
+  </header>
+
+  <main>
+    <section id="home" class="intro">
+      <h1>Slow coffee, made with care.</h1>
+      <p>Hot and cold drinks, brewed to order. Pick your favorites and we'll have them ready at your table.</p>
+    </section>
+
+    <section id="menu" class="menu">
+      <h1 class="section-title">Menu</h1>
+
+      <h3 class="group-title">Hot drinks</h3>
+      <div class="drink-grid">
+        <article class="drink-card">
+          <div class="drink-head">
+            <h4 class="drink-name">Flat White</h4>
+            <span class="drink-price">$4.50</span>
+          </div>
+          <p class="drink-desc">Double espresso with silky steamed milk.</p>
+          <button type="button" class="btn btn-outline">Add to Cart</button>
+        </article>
+
+        <article class="drink-card">
+          <div class="drink-head">
+            <h4 class="drink-name">Velvet Mocha</h4>
+            <span class="drink-price">$5.00</span>
+          </div>
+          <p class="drink-desc">Espresso, dark chocolate and steamed milk.</p>
+          <button type="button" class="btn btn-outline">Add to Cart</button>
+        </article>
+
+        <article class="drink-card">
+          <div class="drink-head">
+            <h4 class="drink-name">Cortado</h4>
+            <span class="drink-price">$3.80</span>
+          </div>
+          <p class="drink-desc">Equal parts espresso and warm milk.</p>
+          <button type="button" class="btn btn-outline">Add to Cart</button>
+        </article>
+      </div>
+
+      <h3 class="group-title">Cold drinks</h3>
+      <div class="drink-grid">
+        <article class="drink-card">
+          <div class="drink-head">
+            <h4 class="drink-name">Iced Latte</h4>
+            <span class="drink-price">$4.80</span>
+          </div>
+          <p class="drink-desc">Chilled espresso over milk and ice.</p>
+          <button type="button" class="btn btn-outline">Add to Cart</button>
+        </article>
+
+        <article class="drink-card">
+          <div class="drink-head">
+            <h4 class="drink-name">Cold Brew</h4>
+            <span class="drink-price">$4.20</span>
+          </div>
+          <p class="drink-desc">Steeped for 18 hours. Smooth and low in acidity.</p>
+          <button type="button" class="btn btn-outline">Add to Cart</button>
+        </article>
+
+        <article class="drink-card">
+          <div class="drink-head">
+            <h4 class="drink-name"> Matcha Latte</h4>
+            <span class="drink-price">$5.50</span>
+          </div>
+          <p class="drink-desc">Blended coffee, organic matcha and ice.</p>
+          <button type="button" class="btn btn-outline">Add to Cart</button>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="info">
+      <h1 class="section-title">About</h1>
+      <p>Velvet Brew is a small, independent coffee shop dedicated to serving high-quality coffee and tea. We source our beans from sustainable farms and roast them to perfection. Our baristas are passionate about their craft and are always happy to recommend a drink or answer any questions you may have.</p>
+    </section>
+
+    <section id="contact" class="info">
+      <h1 class="section-title">Contact</h1>
+      <h3> Get in Touch</h3>
+  <p>Amman, Jordan • Open Daily: 8 AM - 11 PM</p>
+  <p>Drop by for a brew or reach us at <a href="mailto:hello@velvetbrew.com">hello@velvetbrew.com</a></p>
+</section></p>
+    </section>
+  </main>
+
+  <!-- Cart Drawer -->
+  <label for="cart-toggle" class="drawer-overlay" aria-hidden="true"></label>
+
+  <aside class="drawer" aria-label="Your cart">
+    <div class="drawer-header">
+      <h2>Your Order</h2>
+      <label for="cart-toggle" class="drawer-close" aria-label="Close cart">&times;</label>
+    </div>
+
+    <div class="drawer-body">
+      <ul class="cart-items">
+        <li class="cart-item">
+          <div class="cart-item-info">
+            <span class="cart-item-name">Flat White</span>
+            <span class="cart-item-price">$4.50</span>
+          </div>
+          <div class="qty">
+            <button type="button" class="qty-btn" aria-label="Decrease quantity">&minus;</button>
+            <span class="qty-value">1</span>
+            <button type="button" class="qty-btn" aria-label="Increase quantity">+</button>
+          </div>
+          <button type="button" class="remove-btn" aria-label="Remove Flat White">Remove</button>
+        </li>
+
+        <li class="cart-item">
+          <div class="cart-item-info">
+            <span class="cart-item-name">Iced Latte</span>
+            <span class="cart-item-price">$4.80</span>
+          </div>
+          <div class="qty">
+            <button type="button" class="qty-btn" aria-label="Decrease quantity">&minus;</button>
+            <span class="qty-value">1</span>
+            <button type="button" class="qty-btn" aria-label="Increase quantity">+</button>
+          </div>
+          <button type="button" class="remove-btn" aria-label="Remove Iced Latte">Remove</button>
+        </li>
+      </ul>
+
+      <div class="cart-total">
+        <span>Total</span>
+        <strong>$9.30</strong>
+      </div>
+
+      <form class="checkout-form" action="#" method="post">
+        <h3>Checkout</h3>
+
+        <div class="field">
+          <label for="customer-name">Name</label>
+          <input type="text" id="customer-name" name="name" placeholder="Your name" required>
+        </div>
+
+        <div class="field">
+          <label for="contact-info">Table number or phone</label>
+          <input type="text" id="contact-info" name="contact" placeholder="e.g. Table 7" required>
+        </div>
+
+        <div class="field">
+          <label for="notes">Notes</label>
+          <textarea id="notes" name="notes" rows="3" placeholder="Less sugar, oat milk, etc."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Place Order</button>
+      </form>
+    </div>
+  </aside>
+
+  <script src="main.js"></script>
+</body>
+</html>
